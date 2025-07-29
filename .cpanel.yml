@@ -1,0 +1,9 @@
+# cPanel Deployment Configuration
+
+name: Pawlicious-Bites
+deployment:
+  tasks:
+    - export DEPLOY_PATH=/home/saqiicod/public_html/sub-domains/Pawlicious-Bites
+    - echo "Deploying to $DEPLOY_PATH..."
+    - rsync -av --exclude='.git' ./ "$DEPLOY_PATH"
+    - echo "✅ Deployment complete!"

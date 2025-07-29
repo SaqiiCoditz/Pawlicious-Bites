@@ -51,7 +51,7 @@ nav {
   top: 0;
   height: 62px;
   left: 0;
-  z-index: 1000;
+  z-index: 1100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -73,6 +73,7 @@ nav {
   font-size: var(--font-xl);
   color: var(--background-cream);
   font-weight: 600;
+  z-index: 1100;
 }
 
 .hamburger {
@@ -111,7 +112,8 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
+  font-weight: 500;
 }
 
 nav ul li {
@@ -154,6 +156,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-150%);
     transition: all 0.3s ease;
+    z-index: 1000;
   }
 
   .links.active {
@@ -223,7 +226,7 @@ nav ul li a:hover {
 }
 
 .con-left-btn{
-  background-color: var(--button-green);
+  background-color: var(--primary-orange);
   padding: 12px 24px;
   border-radius: 30px;
   color: var(--white);
@@ -235,7 +238,9 @@ nav ul li a:hover {
 }
 
 .con-left-btn:hover {
-  background-color: var(--button-hover-green);
+  background-color: var(--button-green);
+  transform: translateY(-5px);
+  box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .con-right{
@@ -343,6 +348,10 @@ nav ul li a:hover {
 }
 
 @media (max-width:360px){
+  .hero{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .con-left-h1{
     font-size: 1.6rem;
   }
