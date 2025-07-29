@@ -168,7 +168,6 @@ nav ul li a:hover {
     gap: var(--space-sm);
     text-align: center;
     gap: var(--space-md);
-    /* padding: 0 100%; */
   }
 
   .links ul li a {
@@ -201,7 +200,7 @@ nav ul li a:hover {
 
 /*==== Hero Section ====*/
 .hero{
-  padding: 60px 48px;
+  padding: 60px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,5 +371,161 @@ nav ul li a:hover {
 
   .con-right{
     min-width: 250px;
+  }
+}
+
+
+/*==== What we Have ====*/
+.wwh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-orange);
+  padding: 60px 50px;
+}
+
+.wwh h1{
+  font-size: var(--font-xxl);
+  font-family: var(--heading-font);
+  color: var(--white);
+  text-shadow: 4px 6px 6px rgba(0,0,0,0.1);
+}
+
+.wwh-cards{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.wwh-card{
+  width: 300px;
+  height: 100px;
+  background-color: var(--secondary-green);
+  box-shadow: 4px 6px 10px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  transition: all 0.3s ease;
+}
+
+.wwh-card:hover{
+  transform: translateY(-10px);
+  background-color: var(--text-dark);
+}
+
+.wwh-card h2{
+  font-size: var(--font-xl);
+  color: var(--white);
+}
+
+.card-1 img{
+  height: 200px;
+  position: relative;
+  bottom: 30px;
+}
+
+.card-2 img{
+  height: 200px;
+  position: relative;
+  right: 40px;
+  bottom: 30px;
+}
+
+@media (max-width: 768px){
+  .wwh h1{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+  .card-1{
+    margin-top: 50px;
+  }
+
+    .card-2{
+    margin-top: 40px;
+  }
+}
+
+/*==== About Us ====*/
+.about-us{
+  padding: 60px 50px;
+  text-align: center;
+  background-color: var(--secondary-green);
+}
+
+.about-us h1{
+  font-family: var(--heading-font);
+  font-size: var(--font-xxl);
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-shadow: 4px 6px 6px rgba(0,0,0,0.1);
+}
+
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-left{
+  flex: 1 1 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-left img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.about-left img:hover{
+  transform: scale(1.02);
+}
+
+.about-right{
+  flex: 1 1 300px;
+  max-width: 600px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.about-right h2{
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.about-right p{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-left, .about-right {
+    max-width: 100%;
+  }
+
+  .about-right {
+    text-align: center;
   }
 }
