@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  /* ==== Fonts ==== */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Raleway", sans-serif;
+
+  /* ==== Colors ==== */
+  --primary-orange: #ffa500; /* Warm Orange */
+  --secondary-green: #6dbe45; /* Fresh Green */
+  --background-cream: #fff8f0; /* Soft Cream */
+  --text-dark: #333333; /* Charcoal Gray */
+  --text-light: #777777; /* Medium Gray */
+  --button-green: #2C6E31; /* CTA Button Green */
+  --white: #FFF; /*White Color*/
+
+  /* ==== Padding & Margin ==== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* ==== Font Sizes ==== */
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-base: 1rem; /* 16px  */
+  --font-md: 1.125rem; /* 18px */
+  --font-lg: 1.5rem; /* 24px */
+  --font-xl: 2rem; /* 32px */
+  --font-xxl: 3rem; /* 48px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-cream);
+  min-height: 100vh;
+  padding-top: 62px;
+  font-family: var(--heading-font);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 62px;
+  left: 0;
+  /* z-index: 1000; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  font-size: var(--font-base);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo i{
+  align-items: center;
+  margin: 5px;
+  transform: rotate(35deg);
+}
+
+.logo{
+    font-size: var(--font-xl);
+    color: var(--background-cream);
+    font-weight: 600;
+}
+
+.hamburger{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  z-index: 1100;
+}
+
+.hamburger span{
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1200px){
+  .hamburger{
+    display: flex;
+  }
+  .links{
+    position: absolute;
+    top: 62px;
+    right: 0;
+    width: 100%;
+    background-color: var(--primary-orange);
+    padding: var(--space-md);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    transition: all 0.3s ease;
+  }
+
+  .links.active{
+    transform: translateY(0%);
+  }
+  
+  .links ul {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+    gap: var(--space-md);
+  }
+  
+  .links ul li a{
+    padding: 12px;
+    font-size: var(--font-base);
+  }
+}
+
+@media (max-width: 768px){
+  nav{
+    padding: 10px 20px;
+  }
+  .logo{
+    font-size: var(--font-lg);
+  }
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+}
+
+nav ul li{
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: translateY(-5px);
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--font-base);
+    padding: var(--space-sm) var(--space-md);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+    background-color: var(--button-green);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+
+
+/* 
+@media (max-width: 1200px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav .links {
+    display: none; 
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-orange);
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md) 0;
+    gap: var(--space-md);
+  }
+
+  nav .links.show {
+    display: flex;
+  }
+} */
