@@ -87,7 +87,7 @@ This site is deployed using **cPanel**.
 ## 📬 Contact
 
 * 💼 [saqiicoditz.online](https://saqiicoditz.online)
-* 📧 Email: [saqiicoditz@gmail.com](mailto:contact@saqiicoditz.online)
+* 📧 Email: [contact@saqiicoditz.online](mailto:contact@saqiicoditz.online)
 * 📷 Instagram: [@saqiicoditz](https://instagram.com/saqiicoditz)
 
 ---
